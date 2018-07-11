@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mel-michael/promisify-redis.git"
+    "url": "git+https://github.com/mel-michael/redis-promise.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mel-michael/promisify-redis/issues"
+    "url": "https://github.com/mel-michael/redis-promise/issues"
   },
-  "homepage": "https://github.com/mel-michael/promisify-redis#readme",
+  "homepage": "https://github.com/mel-michael/redis-promise#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "redis": "^2.8.0"
