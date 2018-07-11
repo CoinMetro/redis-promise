@@ -1,9 +1,11 @@
-import redis from 'redis';
-import bluebird from 'bluebird';
+'use strict';
 
-bluebird.promisifyAll(redis.RedisClient.prototype);
-bluebird.promisifyAll(redis.Multi.prototype);
+const redis = require('redis');
+const Bluebird = require('bluebird');
+
+Bluebird.promisifyAll(redis.RedisClient.prototype);
+Bluebird.promisifyAll(redis.Multi.prototype);
 
 const dataClient = redis.createClient();
 
-export default dataClient;
+module.exports = dataClient;
