@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const config = {
   host: process.env.REDIS_HOST || '127.0.0.1',
-  port: process.env.REDIS_PORT || 8080,
+  port: process.env.REDIS_PORT || 6379,
   path: process.env.REDIS_PATH || null,
   url: process.env.REDIS_URL || null
 }
