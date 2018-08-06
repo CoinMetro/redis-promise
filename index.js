@@ -7,4 +7,9 @@ Bluebird.promisifyAll(redis.Multi.prototype);
 const subscriber = redis.createClient();
 const dataClient = redis.createClient();
 
-module.exports = { subscriber, dataClient };
+module.exports = {
+  dataClient,
+  subscriber,
+  TO_CHILDREN_CHANNEL: 'TO_CHILDREN',
+  TO_CORE_CHANNEL: 'TO_CORE'
+};
