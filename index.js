@@ -1,18 +1,16 @@
-const redis = require('redis');
-const Bluebird = require('bluebird');
+const Redis = require('ioredis');
 require('dotenv').config();
 
-const config = {
-  host: process.env.REDIS_HOST || '127.0.0.1',
-  port: process.env.REDIS_PORT || 6379,
-  path: process.env.REDIS_PATH || null,
-  url: process.env.REDIS_URL || null
+Redis.Pipeline.prototype.execClean = function () {
+  return this.exec()
+    .then(res => {
+      for (let i = 0; i < res.length; i++)
+        res[i] = res[i][1];
+      return res;
+    });
 }
 
-Bluebird.promisifyAll(redis.RedisClient.prototype);
-Bluebird.promisifyAll(redis.Multi.prototype);
-
-const subscriber = redis.createClient(config);
-const dataClient = redis.createClient(config);
+const subscriber = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
+const dataClient = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
 
 module.exports = { dataClient, subscriber }
