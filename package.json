@@ -1,6 +1,7 @@
 {
   "name": "redis-promise",
-  "version": "0.0.1",
+  "private": true,
+  "version": "0.0.2",
   "description": "A promise wrapper for redis client",
   "main": "index.js",
   "scripts": {
@@ -8,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mel-michael/redis-promise.git"
+    "url": "git+https://github.com/coinmetro/redis-promise.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mel-michael/redis-promise/issues"
+    "url": "https://github.com/coinmetro/redis-promise/issues"
   },
-  "homepage": "https://github.com/mel-michael/redis-promise#readme",
+  "homepage": "https://github.com/coinmetro/redis-promise#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "dotenv": "^6.0.0",
