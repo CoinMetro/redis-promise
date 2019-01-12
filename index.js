@@ -15,4 +15,7 @@ Bluebird.promisifyAll(redis.Multi.prototype);
 const subscriber = redis.createClient(config);
 const dataClient = redis.createClient(config);
 
+dataClient.on("error", err =>console.log("RESDIS dataClient error:", err));
+subscriber.on("error", err =>console.log("REDIS subscriber error:", err));
+
 module.exports = { dataClient, subscriber }
