@@ -1,7 +1,7 @@
 {
   "name": "redis-promise",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A promise wrapper for redis client",
   "main": "index.js",
   "scripts": {
