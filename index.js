@@ -14,13 +14,13 @@ Bluebird.promisifyAll(redis.Multi.prototype);
 
 redis.RedisClient.prototype.hsetAsyncSafe = function (...args) {
   if ((args || []).some(arg => arg === undefined || arg === null))
-    console.error("BAD HSET INPUT", ...args);
+    console.trace("BAD HSET INPUT", ...args);
   return this.hsetAsync(...args);
 };
 
 redis.Multi.prototype.hsetSafe = function (...args) {
   if ((args || []).some(arg => arg === undefined || arg === null))
-    console.error("BAD HSET INPUT", ...args);
+    console.trace("BAD HSET INPUT", ...args);
   return this.hset(...args);
 };
 
